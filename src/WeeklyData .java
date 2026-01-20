@@ -1,16 +1,6 @@
-/**
- * The WeeklyData class stores and analyzes a week’s worth of numeric data.
- * This could represent steps taken, hours of sleep, money spent, screen time,
- * or any other measurable daily value.
- */
+import java.util.ArrayList;
 public class WeeklyData {
-
-    // -------------------------------------------------------------
-    // Instance Variables
-    // -------------------------------------------------------------
-    // TODO: Declare a private array to store the week’s data
-    //       Choose an appropriate type (double[] or int[])
-    //       Create other instance variables as necessary
+    private ArrayList<int> sleepTimes = new ArrayList<>();
     
 
 
@@ -24,8 +14,9 @@ public class WeeklyData {
      * @param input an array representing 7 days of data
      */
     public WeeklyData(double[] input) {
-        // TODO: (Optional) Check if input is null and handle appropriately
-        // TODO: Create a new array with the same length as input
+        int[] inputSleepTimes = new int[7];
+        for (int i = 0; i < 7; i++){
+            int[i] inputSleepTimes = WeeklyData(double[i]);
         // TODO: Copy each value from input into the internal data array
         // NOTE: Do NOT do this.data = input; (that would create aliasing)
     }
