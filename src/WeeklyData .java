@@ -1,24 +1,11 @@
 import java.util.ArrayList;
 public class WeeklyData {
-    private ArrayList<int> sleepTimes = new ArrayList<>();
     
-
-
-    // -------------------------------------------------------------
-    // Constructor
-    // -------------------------------------------------------------
-    /**
-     * Constructs a WeeklyData object by taking in an array of values
-     * and making a deep copy (element-by-element) into the internal array.
-     *
-     * @param input an array representing 7 days of data
-     */
     public WeeklyData(double[] input) {
-        int[] inputSleepTimes = new int[7];
+        int[0] sleepTimes = new int[7];
         for (int i = 0; i < 7; i++){
             int[i] inputSleepTimes = WeeklyData(double[i]);
-        // TODO: Copy each value from input into the internal data array
-        // NOTE: Do NOT do this.data = input; (that would create aliasing)
+        }
     }
 
 
@@ -31,9 +18,9 @@ public class WeeklyData {
      * @return the sum of all values in the data array
      */
     public double getTotal() {
-        // TODO: Create a variable to store the running total
-        // TODO: Use a loop to add each value in the array to the total
-        // TODO: Return the total
+        int total = 0;
+        for (int i = 0; i < 7; i++){
+            total += inputSleepTimes[i];
         return 0.0; // replace with your calculated total
     }
 
