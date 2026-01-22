@@ -21,7 +21,8 @@ public class WeeklyData {
         int total = 0;
         for (int i = 0; i < 7; i++){
             total += inputSleepTimes[i];
-        return 0.0; // replace with your calculated total
+            }
+        return total;
     }
 
 
@@ -35,10 +36,14 @@ public class WeeklyData {
      *         or 0.0 if the array is empty
      */
     public double getAverage() {
-        // TODO: If the array length is 0, return 0.0
-        // TODO: Otherwise, divide the total by the number of elements
-        // Hint: You may call getTotal()
-        return 0.0; // replace with your calculated average
+        if (WeeklyData.getTotal() == 0){
+            return 0.0;
+        }
+        else{
+            int firstStep = WeeklyData.getTotal();
+            firstStep = firstStep / WeeklyData.getLength();
+            return firstStep;
+        }
     }
 
 
@@ -51,10 +56,13 @@ public class WeeklyData {
      * @return the maximum value
      */
     public double getMax() {
-        // TODO: Assume the first value is the current maximum
-        // TODO: Loop through the rest of the array and update max as needed
-        // TODO: Return the maximum value found
-        return 0.0; // replace with the maximum value
+        int max = WeeklyData[0];
+        for (int i = 1; i < WeeklyData.getLength(); i++){
+            if (WeeklyData[i] > max){
+                max = WeeklyData[i];
+            }
+        }
+        return max;
     }
 
 
@@ -67,10 +75,12 @@ public class WeeklyData {
      * @return the minimum value
      */
     public double getMin() {
-        // TODO: Assume the first value is the current minimum
-        // TODO: Loop through the rest of the array and update min as needed
-        // TODO: Return the minimum value found
-        return 0.0; // replace with the minimum value
+        int min = WeeklyData[0];
+        for (int i = i; i < WeeklyData.getLength(); i++){
+            if (WeeklyData[i] < min){
+                min = WeeklyData[i];
+            }
+        }       
     }
 
 
